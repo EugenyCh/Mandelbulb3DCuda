@@ -53,7 +53,7 @@ __global__ void kernel(
 	bool belongs = false;
 	double sqr;
 	int z1 = side - 1 - offsetZ;
-	int z2 = max(side1_2 - 1, side - 1 - rectSize - offsetZ);
+	int z2 = max(0, side - 1 - rectSize - offsetZ);
 	for (int z = z1; z >= z2; --z)
 	{
 		double cz = (bailout * (z - side1_2)) / side1_2;
